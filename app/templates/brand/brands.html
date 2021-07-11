@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>Reklamalar</h1>
+{% for brand in brands %}
+<div class="brands_card">
+        <a class="btn btn-default" href="/app/brands_detail/{{brand.pk}}/">
+            <div class="p_img">
+                <img src="{{brand.photo.url}}"/>
+            </div>
+        </a>
+    </div>
+{% endfor %}
+{% endblock %}

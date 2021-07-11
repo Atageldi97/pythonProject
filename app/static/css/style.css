@@ -1,0 +1,28 @@
+.firms_card{
+    width:100%;
+}
+.firms_card .p_img{
+    float:right;
+    width:50%;
+}
+.firms_card .p_list{
+    float:left;
+    width:50%;
+    height:100%;
+    padding-top:5%;
+}
+.p_img img{
+    width:100%;
+}
+.btn-group #selected{
+    background-color:#7AB992;
+}
+
+.brands_card{
+    width:20%;
+    float:left;
+}
+.brands_card .p_img{
+    float:right;
+    width:100%;
+}

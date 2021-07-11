@@ -1,0 +1,22 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>Reklamalar</h1>
+    {% for firm in firms %}
+    <div class="firms_card">
+        <a class="btn btn-success" href="{{ infofirm.get_absolute_url }}">
+            <div class="p_list">
+                <p>{{ firm.name }}</p>
+                <p>{{ firm.address }}</p>
+                <p>{{ firm.phone }}</p>
+                <p>{{ firm.date }}</p>
+            </div>
+            <div class="p_img">
+                <img src="{{firm.photo1.url}}"/>
+            </div>
+        </a>
+    </div>
+<hr />
+    {% endfor %}
+{% endblock %}

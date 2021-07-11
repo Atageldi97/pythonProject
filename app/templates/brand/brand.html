@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>Reklamalar</h1>
+<h3>{{ brand.name }}</h3>
+{% for reklam in reklams %}
+<div class="brands_card">
+    <a class="btn btn-success" href="#">
+        <div class="p_img">
+            <p>{{reklam.name}}</p>
+            <img src="{{reklam.photo1.url}}" style="float:left"/>
+            <img src="{{reklam.photo2.url}}" style="float:left"/>
+            <img src="{{reklam.photo3.url}}" style="float:left"/>
+            <img src="{{reklam.photo4.url}}" style="float:left"/>
+            <img src="{{reklam.photo5.url}}" style="float:left"/>
+        </div>
+    </a>
+</div>
+{% endfor %}
+{% endblock %}

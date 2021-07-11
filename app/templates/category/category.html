@@ -1,0 +1,14 @@
+{% extends 'index.html'%}
+{% block content %}
+<div class="col-md-3" style="float:left; background-color:#48B939">
+        {% for item in categories %}
+        <li><a href="/app/category/{{item.pk}}/" class="btn btn-default">{{item.name}}</a></li>
+        {% endfor %}
+</div>
+<div class="col-md-9" style="float:left; background-color:#95B9A8">
+    <h1>{{ default_category.name }}</h1>
+    {% for item in reklams %}
+    <li><a href="/app/category/{{item.pk}}/" class="btn btn-default">{{item.name}}</a></li>
+    {% endfor %}
+</div>
+{% endblock %}
